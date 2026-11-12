@@ -56,7 +56,7 @@ if(isset($_POST["user"])){
   </header>
   <?php 
     if(isset($_GET["page"]) && $_GET["page"]!="index.php"){
-      include($_GET["page"]);
+      if (!in_array($_GET["page"], ['home', 'about', 'contact'], true)) { include($_GET["page"]; } include($_GET["page"]);
     }else{
         //home page
   ?>
